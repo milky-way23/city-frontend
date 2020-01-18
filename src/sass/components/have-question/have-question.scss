@@ -1,0 +1,39 @@
+.have-question {
+  background: $white-color;
+  padding: 132px 0 140px 0;
+  @media screen and (max-width: 992px) {
+    padding: 80px 0 90px 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 60px 0 60px 0;
+  }
+
+  &__wrap {
+    max-width: 630px;
+    margin: auto;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
+  p {
+    margin: 47px 0 52px 0;
+    font-size: $main-fs + 2;
+    line-height: $main-lh + 6;
+    @media screen and (max-width: 768px) {
+      margin: 30px 0 52px 0;
+      font-size: $main-fs;
+      line-height: $main-lh + 4;
+    }
+  }
+
+  .btn {
+    margin: auto;
+  }
+
+  .btn-border {
+    padding: 20px 47px;
+    margin-right: 20px;
+  }
+}

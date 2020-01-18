@@ -1,0 +1,564 @@
+.noScroll {
+  overflow: hidden;
+}
+
+.title-page {
+  font-size: 48px;
+  font-family: "Manrope ExtraBold", sans-serif;
+  color: rgb(0, 0, 0);
+  @media screen and (max-width: 1500px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  @media screen and (max-width: 992px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+body {
+  font-family: "Manrope Regular", sans-serif;
+}
+
+.block-title {
+  padding: 130px 0 153px 0;
+  @media screen and (max-width: 1200px) {
+    padding: 100px 0 103px 0;
+  }
+
+  @media screen and (max-width: 992px) {
+    flex-direction: column !important;
+    padding: 80px 0 103px 0;
+
+    .col-50 {
+      width: 100%;
+      min-width: 100%;
+    }
+
+    .br {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 45px 0 60px 0;
+  }
+
+  &__wrap {
+    padding-left: 38px;
+    padding-right: 20px;
+    @media screen and (max-width: 992px) {
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 576px) {
+      margin-top: 30px;
+    }
+  }
+
+  p {
+    font-size: $main-fs;
+    line-height: $main-lh + 6;
+    margin-bottom: 0;
+  }
+}
+
+.subtitle-page {
+}
+
+.h1, h1 {
+  font-size: 48px;
+  font-family: "Manrope ExtraBold", sans-serif;
+  color: rgb(0, 0, 0);
+  line-height: 56px;
+  @media screen and (max-width: 1500px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  @media screen and (max-width: 992px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.h2, h2 {
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0.3px;
+  font-family: "Manrope Bold", sans-serif;
+  color: rgb(0, 0, 0);
+  @media screen and (max-width: 1500px) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  @media screen and (max-width: 992px) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.h3, h3 {
+  font-size: $main-fs + 9;
+  line-height: $main-lh + 12;
+  letter-spacing: -0.05px;
+  font-family: "Manrope SemiBold", sans-serif;
+  margin-bottom: 25px;
+  @media screen and (max-width: 1500px) {
+    font-size: $main-fs + 9;
+    line-height: $main-lh + 10;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: $main-fs + 7;
+    line-height: $main-lh + 9;
+  }
+  @media screen and (max-width: 992px) {
+    font-size: $main-fs + 6;
+    line-height: $main-lh + 8;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: $main-fs + 5;
+    line-height: $main-lh + 7;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: $main-fs + 4;
+    line-height: $main-lh + 6;
+  }
+}
+
+.h4, h4 {
+  font-size: $main-fs + 4;
+  line-height: $main-lh + 8;
+  letter-spacing: 0.2px;
+  font-family: "Manrope SemiBold", sans-serif;
+  margin-bottom: 20px;
+}
+
+.h6, h6 {
+  font-size: $main-fs - 2;
+  line-height: $main-lh + 2;
+  letter-spacing: 0.2px;
+  font-family: "Manrope SemiBold", sans-serif;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: $main-fs;
+  line-height: $main-lh + 6;
+  margin-bottom: 0;
+  @media screen and (max-width: 576px) {
+    font-size: $main-fs - 1;
+    line-height: $main-lh + 5;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+
+.bg-shadow {
+  //box-shadow: 10px 17.321px 90px 0px rgb(0, 0, 0);
+  background-color: rgb(243, 243, 243);
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.col-3 {
+  width: calc(100% / 3);
+  min-width: calc(100% / 3);
+}
+
+.form-group {
+  label {
+    margin-bottom: 25px;
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #f3f3f3;
+    padding: 5px 0;
+    font-size: 14.6px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-family: "Manrope Regular", sans-serif;
+
+    &::placeholder {
+      color: #c6c6c6;
+    }
+
+    &:focus, &:active {
+      border-color: $green-color;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+.form-slider {
+  position: relative;
+  padding-bottom: 40px;
+
+  label {
+    display: block;
+    margin-bottom: 55px;
+  }
+
+  .ui-widget.ui-widget-content {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #f3f3f3;
+    height: 1px;
+    width: 100%;
+  }
+
+  .ui-slider-handle.ui-state-default {
+    border-radius: 50%;
+    background-color: rgb(214, 221, 37);
+    box-shadow: 5px 8.66px 10px -5px rgb(120, 124, 21);
+    width: 34px;
+    height: 34px;
+    top: -17px;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+      top: -20px;
+      display: table;
+      width: 100px;
+      left: -32px;
+      right: 0;
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  .ui-state-focus {
+    border: none;
+  }
+
+  &__min, &__max {
+    position: absolute;
+    bottom: -30px;
+    font-size: 12.6px;
+    color: rgb(198, 198, 198);
+    line-height: 1;
+  }
+
+  &__min {
+    left: 0;
+  }
+
+  &__max {
+    right: 0;
+  }
+}
+
+.nav-support {
+  background: $white-color;
+
+  .swiper-no-swiping {
+    padding: 70px 0 45px 0;
+
+    .swiper-wrapper {
+      justify-content: space-between;
+    }
+
+    .justify-center {
+      justify-content: center;
+
+      .swiper-slide {
+        padding: 0 10px;
+      }
+    }
+
+    .swiper-slide {
+      width: auto;
+
+      a {
+        font-size: 12px;
+        color: rgb(198, 198, 198);
+        padding: 0;
+        display: block;
+        text-decoration: none;
+        transition: all 0.25s;
+        line-height: 20px;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+          text-decoration: none;
+          color: $black-color;
+          border-bottom: 1px solid $yellow-btn-color;
+        }
+      }
+
+      a.active {
+        color: $black-color;
+        border-bottom: 1px solid $yellow-btn-color;
+      }
+    }
+  }
+}
+
+
+.form-radio {
+  position: relative;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .form-label {
+      display: block;
+      font-size: 14px;
+      color: rgb(198, 198, 198);
+      line-height: 1;
+      margin-bottom: 35px;
+      width: 100%;
+      font-family: "Manrope Light", sans-serif;
+    }
+  }
+
+  input[type='checkbox'] {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 17px;
+    line-height: 34px;
+    min-width: 34px;
+    height: 34px;
+    display: block;
+    padding: 0 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+
+  input[type='checkbox']:checked + label {
+    background-color: rgb(214, 221, 37);
+    box-shadow: 5px 8.66px 10px -8px rgb(120, 124, 21);
+  }
+
+  &:last-child label {
+    margin-right: 0;
+  }
+}
+
+.form-wow {
+  input[type='checkbox'] {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    color: rgb(0, 0, 0);
+    display: block;
+    padding: 21px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(198, 198, 198);
+    height: 58px;
+    border-radius: 29px;
+    box-sizing: border-box;
+
+    span {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background: $yellow-btn-color;
+      cursor: pointer;
+      margin-left: 8px;
+      font-size: 8px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 14px;
+      vertical-align: top;
+    }
+  }
+
+  input[type='checkbox']:checked + label {
+    border-color: $yellow-btn-color;
+  }
+}
+
+.form-check-group {
+  position: relative;
+
+  input[type='checkbox'] {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    color: $black-color;
+    display: block;
+    box-sizing: border-box;
+    padding-left: 50px;
+    height: 38px;
+    padding-top: 12px;
+
+    &:before {
+      content: '';
+      display: block;
+      height: 38px;
+      width: 38px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid $black-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      content: '';
+      height: 19px;
+      width: 10px;
+      position: absolute;
+      top: 7px;
+      left: 14px;
+      transform: rotate(40deg);
+      border-right: 1px solid $black-color;
+      border-bottom: 1px solid $black-color;
+      display: none;
+      z-index: 2;
+    }
+  }
+
+  input[type='checkbox']:checked + label:before {
+    border-color: $yellow-btn-color;
+    background: $yellow-btn-color;
+  }
+
+  input[type='checkbox']:checked + label:after {
+    display: block;
+  }
+}
+
+.show-tab {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 1;
+    color: #d8d8d8;
+    cursor: pointer;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+      margin-right: 10px;
+      svg {
+        height: 14px !important;
+        width: 14px !important;
+      }
+      path {
+        fill: #c7c7c7 !important;
+      }
+    }
+
+    &.active {
+      color: $black-color;
+
+      span path {
+        fill: $black-color !important;
+      }
+    }
+  }
+}

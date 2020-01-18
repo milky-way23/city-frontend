@@ -1,0 +1,68 @@
+%clearfix {
+  zoom: 1;
+  display: block;
+  clear: both;
+  float: none;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin CalibriRegular() {
+  font-family: 'GothaProReg', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin CalibriBold() {
+  font-family: 'Calibri-Bold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+@mixin CalibriLight() {
+  font-family: 'Calibri-Light', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin LatoRegular() {
+  font-family: 'Lato-Regular', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin LatoBold() {
+  font-family: 'Lato-Bold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+@mixin GothamPro-Light() {
+  font-family: 'GothamPro-Light', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin GothamPro-Regular() {
+  font-family: 'GothamPro-Regular', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin GothamPro-Medium() {
+  font-family: 'GothamPro-Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+@mixin GothamPro-Bold() {
+  font-family: 'GothamPro-Bold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin GothamPro-Medium() {
+  font-family: 'GothamPro-Medium', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}

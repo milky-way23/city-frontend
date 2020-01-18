@@ -1,0 +1,321 @@
+//= template/layout/head.html
+
+//= template/layout/header-page.html
+
+
+<div class="life">
+    <div class="container">
+        <div class="life__title">City Life Style</div>
+        <div class="life__question">Опишите себя:</div>
+
+        <form>
+            <div class="life__wrap active" id="option0" data-title="Опишите себя:">
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life1" name="life-test" data-option="option1_1">
+                    <label for="life1">
+                        <img src="static/img/life1.svg">
+                        <p>Одиночка</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life2" name="life-test" data-option="option2_1">
+                    <label for="life2">
+                        <img src="static/img/life2.svg">
+                        <p>Молодая пара</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life3" name="life-test" data-option="option3_1">
+                    <label for="life3">
+                        <img src="static/img/life3.svg">
+                        <p>Семья с ребенком</p>
+                    </label>
+                </div>
+
+                <div class="life__btn js-first-block">
+                    <a href="#" class="btn btn-not-border disabled">Вернуться назад</a>
+                    <button class="btn btn-line" disabled="disabled">Продолжить</button>
+                </div>
+            </div>
+
+            <div class="life__wrap" id="option1_1" data-title="Как проводите выходные?">
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life11_1" name="life-test1-1"
+                           data-option="option1_2">
+                    <label for="life11_1">
+                        <img src="static/img/life1.svg">
+                        <p>Устраиваю вечеринки с друзьями, места хватает</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life11_2" name="life-test1-1"
+                           data-option="option1_2">
+                    <label for="life11_2">
+                        <img src="static/img/life2.svg">
+                        <p>Уединино почитаю, посмотрю фильм</p>
+                    </label>
+                </div>
+
+                <div class="life__btn">
+                    <a href="#" class="btn btn-not-border disabled" data-prev="option0">Вернуться назад</a>
+                    <button class="btn btn-line" disabled="disabled" data-next="option1_2">Продолжить</button>
+                </div>
+            </div>
+
+            <div class="life__wrap" id="option2_1" data-title="Планируете ли ребенка?">
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life21_1" name="life-test2-1"
+                           data-option="option2_2">
+                    <label for="life21_1">
+                        <img src="static/img/life1.svg">
+                        <p>Конечно!</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life21_2" name="life-test2-1"
+                           data-option="option2_2">
+                    <label for="life21_2">
+                        <img src="static/img/life2.svg">
+                        <p>Пока нет</p>
+                    </label>
+                </div>
+
+                <div class="life__btn">
+                    <a href="#" class="btn btn-not-border" data-prev="option0">Вернуться назад</a>
+                    <button class="btn btn-line" disabled="disabled" data-next="option2_2">Продолжить</button>
+                </div>
+            </div>
+
+            <div class="life__wrap" id="option3_1" data-title="Сколько у вас детей?">
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life31_1" name="life-test3-1"
+                           data-option="option3_2">
+                    <label for="life31_1">
+                        <img src="static/img/life1.svg">
+                        <p>Один!</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life31_2" name="life-test3-1"
+                           data-option="option3_2">
+                    <label for="life31_2">
+                        <img src="static/img/life2.svg">
+                        <p>Двое!</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life31_3" name="life-test3-1"
+                           data-option="option3_2">
+                    <label for="life31_3">
+                        <img src="static/img/life3.svg">
+                        <p>Трое!</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life31_4" name="life-test3-1"
+                           data-option="option3_2">
+                    <label for="life31_4">
+                        <img src="static/img/life1.svg">
+                        <p>Больше трех!</p>
+                    </label>
+                </div>
+
+                <div class="life__btn">
+                    <a href="#" class="btn btn-not-border" data-prev="option0">Вернуться назад</a>
+                    <button class="btn btn-line" disabled="disabled" data-next="option3_2">Продолжить</button>
+                </div>
+            </div>
+
+            <div class="life__wrap" id="option1_2" data-title="Что вы больше предпочитаете?">
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life12_1" name="life-test1-2"
+                           data-option="option1_3">
+                    <label for="life12_1">
+                        <img src="static/img/life1.svg">
+                        <p>Жить на низком этаже</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life12_2" name="life-test1-2"
+                           data-option="option1_3">
+                    <label for="life12_2">
+                        <img src="static/img/life2.svg">
+                        <p>Наслаждаться панорамой города</p>
+                    </label>
+                </div>
+
+                <div class="life__btn">
+                    <a href="#" class="btn btn-not-border" data-prev="option1_2">Вернуться назад</a>
+                    <button class="btn btn-line" disabled="disabled" data-next="option1_3">Продолжить</button>
+                </div>
+            </div>
+
+            <div class="life__wrap" id="option2_2" data-title="Часто ли у вас остаются гости?">
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life22_1" name="life-test2-2"
+                           data-option="option2_3">
+                    <label for="life22_1">
+                        <img src="static/img/life1.svg">
+                        <p>Довольно часто</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life22_2" name="life-test2-2"
+                           data-option="option2_3">
+                    <label for="life22_2">
+                        <img src="static/img/life2.svg">
+                        <p>Очень редко</p>
+                    </label>
+                </div>
+
+                <div class="life__btn">
+                    <a href="#" class="btn btn-not-border disabled" data-prev="option2_2">Вернуться назад</a>
+                    <button class="btn btn-line" disabled="disabled" data-next="option2_3">Продолжить</button>
+                </div>
+            </div>
+
+            <div class="life__wrap" id="option3_2" data-title="Остаются ли ваши родители на ночь ради внуков?">
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life32_1" name="life-test3-2"
+                           data-option="option3_2">
+                    <label for="life32_1">
+                        <img src="static/img/life1.svg">
+                        <p>Довольно часто</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life32_2" name="life-test3-2"
+                           data-option="option3_2">
+                    <label for="life32_2">
+                        <img src="static/img/life2.svg">
+                        <p>Очень редко</p>
+                    </label>
+                </div>
+
+                <div class="life__btn">
+                    <a href="#" class="btn btn-not-border disabled" data-prev="option3_2">Вернуться назад</a>
+                    <button class="btn btn-line" disabled="disabled" data-next="option3_3">Продолжить</button>
+                </div>
+            </div>
+
+            <div class="life__wrap" id="option1_3" data-title="Свободный вечер. Чей займетесь?">
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life13_1" name="life-test1-3"
+                           data-option="finish">
+                    <label for="life13_1">
+                        <img src="static/img/life1.svg">
+                        <p>Навещу родителей</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life13_2" name="life-test1-3"
+                           data-option="finish">
+                    <label for="life13_2">
+                        <img src="static/img/life2.svg">
+                        <p>Почитаю или поиграю в приставку</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life13_3" name="life-test1-3"
+                           data-option="finish">
+                    <label for="life13_3">
+                        <img src="static/img/life3.svg">
+                        <p>Пойду в фитнес-центр, потом встречусь с друзьями</p>
+                    </label>
+                </div>
+
+                <div class="life__btn">
+                    <a href="#" class="btn btn-not-border disabled" data-prev="option1_3">Вернуться назад</a>
+                    <button class="btn btn-line" disabled="disabled" data-next="finish">Продолжить</button>
+                </div>
+            </div>
+
+            <div class="life__wrap" id="option2_3" data-title="Наконец-то выходные! Чем займетесь?">
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life23_1" name="life-test2-3"
+                           data-option="finish">
+                    <label for="life23_1">
+                        <img src="static/img/life1.svg">
+                        <p>Отправимся на прогулку</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life23_2" name="life-test2-3"
+                           data-option="finish">
+                    <label for="life23_2">
+                        <img src="static/img/life2.svg">
+                        <p>Позовем к себе гостей</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life23_3" name="life-test2-3"
+                           data-option="finish">
+                    <label for="life23_3">
+                        <img src="static/img/life3.svg">
+                        <p>Легкий ужин в ресторане, а после на вечеринку</p>
+                    </label>
+                </div>
+
+                <div class="life__btn">
+                    <a href="#" class="btn btn-not-border disabled" data-prev="option2_3">Вернуться назад</a>
+                    <button class="btn btn-line" disabled="disabled" data-next="finish">Продолжить</button>
+                </div>
+            </div>
+
+            <div class="life__wrap" id="option3_3" data-title="Вернемся к вам! Чем займетесь на выходных?">
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life33_1" name="life-test3-3"
+                           data-option="finish">
+                    <label for="life33_1">
+                        <img src="static/img/life1.svg">
+                        <p>Берем детей и на прогулку во двор</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life33_2" name="life-test3-3"
+                           data-option="finish">
+                    <label for="life33_2">
+                        <img src="static/img/life2.svg">
+                        <p>В торговый центр за покупками и в кино</p>
+                    </label>
+                </div>
+
+                <div class="life-group">
+                    <input type="radio" class="life-group__input" id="life33_3" name="life-test3-3"
+                           data-option="finish">
+                    <label for="life33_3">
+                        <img src="static/img/life3.svg">
+                        <p>Пойдем развлекаться, пока дети с бабушкой</p>
+                    </label>
+                </div>
+
+                <div class="life__btn">
+                    <a href="#" class="btn btn-not-border disabled" data-prev="option3_3">Вернуться назад</a>
+                    <button class="btn btn-line" disabled="disabled" data-next="finish">Продолжить</button>
+                </div>
+            </div>
+
+            <div id="finish">
+
+            </div>
+        </form>
+
+    </div>
+</div>
+//= template/layout/modal.html
+//= template/layout/footer.html

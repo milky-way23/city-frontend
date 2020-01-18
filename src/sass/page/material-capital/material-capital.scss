@@ -1,0 +1,12 @@
+.mat-capital-image {
+  width: 370px;
+  height: auto;
+  position: absolute;
+  left: auto;
+  right: auto;
+  bottom: -80px;
+  top: auto;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+}

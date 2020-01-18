@@ -1,0 +1,10 @@
+//= partials/main.js
+//= partials/nav-support.js
+//= partials/military.js
+//= partials/mortgage.js
+//= partials/choose-page.js
+//= partials/contact.js
+//= partials/project-page.js
+//= partials/city-fest.js
+//= partials/city-life.js
+//= partials/visual.js

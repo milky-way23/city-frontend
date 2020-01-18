@@ -1,0 +1,455 @@
+.apartment-card{
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 135px 0px 40px;
+  background-color: $bg-color-fafafa;
+
+  .container{
+    &.container-fluid{
+      @media all and(max-width: 576px){
+        padding: 0px 28px;
+      }
+      @media all and(max-width: 450px){
+        padding: 0px 15px;
+      }
+    }
+  }
+
+  &-wrap{
+    position: relative;
+    width: 100%;
+    max-width: 1420px;
+    min-width: 1420px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 88px 162px;
+    background-color  : $bg-color-white;
+    @media all and (max-width: 1600px){
+      max-width: 1253px;
+      min-width: 100%;
+      padding: 80px;
+    }
+    @media all and(max-width: 1024px){
+      padding: 80px 15px;
+    }
+    @media all and(max-width: 576px){
+      padding: 46px 15px;
+      margin: 32px 0px;
+    }
+  }
+
+  &__back{
+    position: relative;
+    display: inline-block;
+    font-size: $main-fs;
+    @include GothamPro-Regular();
+    color: $font-color-BBBDBF;
+    text-decoration: none;
+    margin-left: 78px;
+
+    &:before{
+      position: absolute;
+      content: '';
+      width: 46px;
+      height: 17px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('/static/img/object/arrow-left.svg');
+      top: 0px;
+      left: -78px;
+    }
+
+    @media all and(max-width: 1024px){
+      display: none;
+    }
+  }
+
+  &__head{
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin-top: 64px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    h2{
+      @include GothamPro-Medium();
+      font-size: $main-fs + 18;
+      line-height: $main-lh + 26;
+      @media all and(max-width: 1024px){
+        text-align: center;
+        margin-bottom: 45px;
+      }
+      @media all and(max-width: 768px){
+        margin-bottom: 38px;
+      }
+      &.short-head{
+        display: none;
+        @media all and(max-width: 768px){
+          display: block;
+        }
+      }
+      @media all and(max-width: 768px){
+        display: none;
+      }
+    }
+
+    a{
+        position: relative;
+        @include GothamPro-Medium();
+        text-decoration: none;
+        text-transform: uppercase;
+        margin: auto 29px auto auto;
+        color: $font-color-black;
+        &:after{
+          content: '';
+          position: absolute;
+          width: 9px;
+          height: 12px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url('/static/img/how-to-buy/stock-detail-arrow.svg');
+          top: 3px;
+          right: -24px;
+          transform: rotate(180deg);
+          @media all and(max-width: 768px){
+            top: 2px;
+          }
+        }
+
+        &:hover{
+          color: $blue-color;
+        }
+        @media all and(max-width: 1024px){
+          margin: auto;
+        }
+        @media all and(max-width: 768px){
+          font-size: $main-fs - 2;
+          letter-spacing: 0.05em;
+        }
+    }
+    @media all and(max-width: 1024px){
+      margin-top: 0px;
+      flex-direction: column;
+    }
+    @media all and(max-width: 576px){
+      margin-bottom: 51px;
+    }
+  }
+
+  &__body{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media all and(max-width: 1024px){
+      flex-direction: column;
+    }
+    @media all and(max-width: 576px){
+      padding: 0px 7px;
+      box-sizing: border-box;
+    }
+  }
+  &__left,
+  &__right{
+    position: relative;
+    width: 50%;
+    height: auto;
+    @media all and(max-width: 1024px){
+      width: 100%;
+    }
+  }
+
+  &__right{
+    width: 45%;
+    box-sizing: border-box;
+    padding: 58px 0px 0px;
+    button{
+      margin-bottom: 73px;
+    }
+    @media all and(max-width: 1024px){
+      width: 100%;
+    }
+  }
+
+  &-image-wrap{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: solid 1px $bg-color-f1f1f2;
+    box-sizing: border-box;
+    padding: 37px 0px 0px;
+  }
+  &__lense{
+    position: relative;
+    display: flex;
+    margin: 0px 42px 51px auto;
+    width: 23px;
+    height: 23px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/static/img/object/lens-ico.svg');
+    @media all and(max-width: 576px){
+      display: none;
+    }
+  }
+  &__image{
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0px 33px;
+    margin-bottom: 60px;
+    img{
+      @media all and (max-width: 1440px){
+        width: 100%;
+      }
+    }
+    @media all and(max-width: 576px){
+      margin-bottom: 30px;
+    }
+  }
+
+  &__name{
+    position: relative;
+    display: block;
+    @include GothamPro-Light();
+    font-size: $main-fs;
+    line-height: $main-lh + 14;
+    color: $bg-color-BBBDBF;
+    margin-bottom: 30px;
+    @media all and(max-width: 576px){
+      margin-bottom: 35px;
+    }
+  }
+
+  &__price{
+    @include GothamPro-Medium();
+    font-size: $main-fs + 18;
+    color: $blue-color;
+    margin-left: 10px;
+    letter-spacing: 0.02em;
+    margin-bottom: 62px;
+    @media all and(max-width: 576px){
+      margin-bottom: 60px;
+    }
+    @media all and(max-width: 350px){
+      font-size: $main-fs + 14;
+    }
+  }
+
+  @media all and(max-width: 1024px){
+    padding: 60px 0px 40px;
+  }
+  @media all and(max-width: 576px){
+    padding: 0px 0px 40px;
+  }
+}
+
+.apartment-preview-switcher{
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &__item{
+    position: relative;
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 46px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 2px transparent;
+    cursor: pointer;
+    a{
+      text-decoration: none;
+      color: $font-color-black;
+      @include GothamPro-Regular();
+      font-size: $main-fs;
+    }
+
+    &.active,
+    &:hover{
+      border-bottom: solid 2px $blue-color;
+      a{
+        color: $blue-color;
+      }
+    }
+  }
+}
+
+.apartment-card-info{
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  &__item{
+    position: relative;
+    width: 33.333333%;
+    min-width: 33.333333%;
+    max-width: 33.333333%;
+    margin-bottom: 46px;
+
+    p{
+      @include GothamPro-Light();
+      font-size: $main-fs;
+      color: $font-color-BBBDBF;
+
+      &:first-child{
+        margin-bottom: 17px;
+      }
+
+      span{
+        font-size: $main-fs + 2;
+        @include GothamPro-Medium();
+        color: $font-color-black;
+      }
+    }
+
+    @media all and(max-width: 576px){
+      width: 26%;
+      min-width: 26%;
+      max-width: 26%;
+    }
+    @media all and(max-width: 475px){
+      width: 50%;
+      min-width: 50%;
+      max-width: 50%;
+    }
+  }
+  @media all and(max-width: 576px){
+    justify-content: space-between;
+  }
+}
+
+
+
+.apartment-card-desc{
+  position: relative;
+  width: 100%;
+  height: auto;
+  p{
+    @include GothamPro-Light();
+    font-size: $main-fs;
+    line-height: $main-lh + 13;
+    margin-bottom: 32px;
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.apartment-fav-block{
+  position: relative;
+    width: 221px;
+    height: 34px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 45px;
+    margin-left: 9px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 34px;
+  p{
+    @include GothamPro-Medium();
+    font-size: $main-fs - 3;
+    color: $font-color-white;
+    margin: auto 16px auto auto;
+  }
+
+  @media all and(max-width: 576px){
+    margin-top: 41px;
+    margin-left: -4px;
+  }
+}
+
+.apartment-card-file{
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__wrap{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;;
+    align-content: center;
+    img{
+      width: 43px;
+      min-width: 43px;
+      height: 47px;
+      margin-right: 23px;
+    }
+    p{
+      @include GothamPro-Light();
+      font-size: $main-fs - 2;
+      color: $font-color-BBBDBF;
+      @media all and(max-width: 576px){
+        max-width: 100px;
+        line-height: 25px;
+      }
+    }
+
+  }
+
+  a{
+    position: relative;
+    display: inline-block;
+    margin: auto 0px auto auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $blue-color;
+    @include GothamPro-Medium();
+    font-size: $main-fs - 2;
+    &:before{
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $blue-color;
+      content: '';
+      bottom: -15px;
+      left: 0px;
+      @media all and(max-width: 576px){
+        bottom: -10px;
+      }
+    }
+
+    @media all and(max-width: 576px){
+      margin: 12px 0px auto auto;
+      letter-spacing: 0.08em;
+    }
+    @media all and(max-width: 475px){
+      margin: 50px auto 0px;
+    }
+  }
+
+  @media all and(max-width: 576px){
+    margin-top: 55px;
+  }
+  @media all and(max-width: 475px){
+    flex-direction: column;
+  }
+}
