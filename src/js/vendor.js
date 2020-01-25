@@ -5,3 +5,4 @@
 //= vendor/slick.min.js
 //= vendor/jquery.mCustomScrollbar.min.js
 //= vendor/jquery.ui.touch-punch.min.js
+//= vendor/jquery.fancybox.min.js

@@ -8,3 +8,4 @@
 //= partials/city-fest.js
 //= partials/city-life.js
 //= partials/visual.js
+//= partials/common.js

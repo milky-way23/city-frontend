@@ -51,12 +51,16 @@ html {
   background-size: contain;
   cursor: pointer;
   z-index: 2;
-  display: none;
   @media screen and (max-width: 1200px) {
     right: 60px;
   }
   @media screen and (max-width: 992px) {
     right: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    right: 10px;
+    transform: scale(1.2);
+    display: block;
   }
   @media screen and (max-width: 576px) {
     right: 10px;
@@ -116,18 +120,21 @@ html {
     &__title {
       text-align: center;
       color: $white-color;
-      font-size: 22px;
-      line-height: 1.5;
+      font-size: 20px;
+      line-height: 1.7;
       font-weight: 500;
       margin-top: 40px;
       margin-bottom: 32px;
       @media screen and (max-width: 576px) {
-        font-size: 18px;
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 500;
+        margin-top: 18px;
       }
     }
 
     img {
-      width: 35vw;
+      width: 28vw;
       max-width: 668px;
       display: block;
       @media screen and (max-width: 1600px) {
@@ -136,7 +143,7 @@ html {
 
       @media screen and (max-width: 768px) {
         width: 420px;
-        max-width: calc(100% - 90px);
+        max-width: calc(100% - 101px);
       }
     }
 
@@ -144,24 +151,35 @@ html {
       display: none;
       @media screen and (max-width: 768px) {
         display: block;
+        opacity: 1;
+        & *{
+          opacity: 1;
+        }
       }
-
+      .btn-yellow-border{
+        padding: 8px 24px;
+      }
       .btn-youtube {
         color: $white-color;
         font-size: 14px;
         cursor: pointer;
         margin: 32px auto 0 auto;
         width: max-content;
-
+        transform: translate(-6px,1px);
         &:hover {
           color: $white-color;
         }
 
         span {
-          height: 26px;
-          width: 33px;
+          height: 24px;
+          width: 32px;
+          margin-right: 14px;
         }
       }
+    }
+
+    @media all and(max-width: 576px){
+      top: 35%;
     }
   }
 
@@ -296,6 +314,7 @@ html {
     justify-content: space-between;
     align-items: flex-start;
     padding-bottom: 60px;
+
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -304,7 +323,7 @@ html {
       list-style: none;
       padding: 0;
       margin: 0;
-
+      opacity: 0;
       li a {
         display: block;
         font-size: 14px;
@@ -347,8 +366,6 @@ html {
     }
 
     .btn-youtube {
-      color: $white-color;
-      font-size: 14px;
       cursor: pointer;
 
       &:hover {
@@ -358,6 +375,13 @@ html {
       span {
         height: 26px;
         width: 33px;
+      }
+      p{
+        color: $white-color;
+        font-size: 13px;
+        display: flex;
+        margin: auto;
+        line-height: 13px;
       }
     }
   }
@@ -409,7 +433,8 @@ html {
     }
 
     &--col2 {
-      background: $white-color;
+      //background: $white-color;
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -428,13 +453,41 @@ html {
         min-width: 70%;
       }
     }
+
+    &-bg{
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      display: flex;
+      div{
+        background: $white-color;
+        width: 50%;
+        height: 100%;
+        transition: 1s;
+        transform: translate(0px, 100%);
+        &:nth-child(1){
+          left: 0px;
+          transition-delay: 0s;
+        }
+        &:nth-child(2){
+          left: 50%;
+          transition-delay: 0.3s;
+        }
+      }
+    }
   }
 
   &__footer--down {
+    opacity: 0;
+    z-index: 2;
     display: block;
     cursor: pointer;
-    height: 40px;
+    height: 50px;
     width: 20px;
+    transform: translate(0px,0px);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 20px;
@@ -451,40 +504,21 @@ html {
     }
   }
 
-  @-webkit-keyframes arrow-down {
-    from {
-      height: 40px;
-    }
-    to {
-      height: 50px;
-    }
-  }
-  @-moz-keyframes arrow-down {
-    from {
-      height: 40px;
-    }
-    to {
-      height: 50px;
-    }
-  }
-  @-o-keyframes arrow-down {
-    from {
-      height: 40px;
-    }
-    to {
-      height: 50px;
-    }
-  }
   @keyframes arrow-down {
     from {
-      height: 40px;
+      transform: translate(0px,0px);
     }
     to {
-      height: 50px;
+      transform: translate(0px,10px);
     }
   }
 
+  &__footer--info{
+    z-index: 2;
+  }
+
   .w-40 {
+    z-index: 2;
     width: 40%;
     min-width: 40%;
     @media screen and (max-width: 1500px) {
@@ -500,6 +534,10 @@ html {
   }
 
   &__footer--soc {
+    opacity: 0;
+    transform: translate(50px,0px);
+    transition-delay: 1s;
+    transition: 0.5s;
     display: flex;
     align-items: center;
     width: 100%;
@@ -536,12 +574,13 @@ html {
       display: block;
       height: 30px;
       line-height: 30px;
-      transition: all 0.25s;
+      transition: all 0.6s;
       margin-bottom: 10px;
       color: $black-color;
       text-decoration: none;
       font-weight: 600;
-
+      transform: translate(50px, 0px);
+      opacity: 0;
       @media screen and (max-width: 576px) {
         height: 21px;
         line-height: 21px;
@@ -552,9 +591,16 @@ html {
         text-decoration: none;
         color: $yellow-btn-color;
       }
+      &.anim-off{
+        transition-delay: 0s;
+        transition: all 0.2s;
+      }
     }
 
     p {
+      opacity: 0;
+      transition: 0.5s;
+      transition-delay: 1s;
       font-size: 14.352px;
       color: rgb(78, 78, 78);
     }
@@ -570,6 +616,9 @@ html {
     justify-content: space-between;
 
     a {
+      opacity: 0;
+      transition-delay: 1.35s;
+      transition: 0.5s;
       display: block;
       color: $black-color;
       text-decoration: none;
@@ -1035,24 +1084,12 @@ html {
   .main-center img, .main-center__title {
     opacity: 0;
   }
-
-  .container-fluid.flex-end {
-    opacity: 0;
-  }
-
-  .main__footer {
-    opacity: 0;
-  }
 }
 
 .anim {
-  .header, .container-fluid.flex-end, .main__footer {
-    animation: mainAnim 1.5s both;
-  }
   .main-center img {
     animation: mainAnim 1s 1.5s both;
   }
-
   .main-center__title {
     animation: mainAnim 1.5s both;
     -webkit-animation-delay: 2.5s;
@@ -1060,6 +1097,78 @@ html {
     -o-animation-delay: 2.5s;
     animation-delay: 2.5s;
   }
+  .header {
+    animation: mainAnim 1.5s both;
+  }
+
+  .header{
+    .header__btn{
+      transition: 1.5s;
+      transform: translate(0px, 0px);
+    }
+  }
+
+  .main-left__priority{
+    animation: asideAnim 1.5s both;
+  }
+
+  .main-left{
+    .btn-yellow-border{ /*2*/
+      opacity: 1;
+      //transition-delay: 0.65s;
+    }
+    .btn-youtube{ /*3*/
+      opacity: 1;
+      transition-delay: 0.9s;
+    }
+  }
+
+
+  .main__footer-bg{
+    div{
+      transition: 1s;
+      transform: translate(0px, 0%);
+      &:nth-child(1){
+        transition-delay: 0s;
+      }
+      &:nth-child(2){
+        transition-delay: 0.3s;
+      }
+    }
+  }
+
+  .main__footer--down{
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+
+  .main-menu__footer--phone{
+    opacity: 1;
+    transform: translate(0px,0px);
+    transition-delay: 0.6s;
+  }
+
+  .main__footer--info p{
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 1s;
+  }
+
+  .main__footer--soc{
+    opacity: 1;
+    transform: translate(0px,0px);
+    transition-delay: 1s;
+  }
+
+  .w-40 {
+    .space-between {
+      a{
+        opacity: 1;
+        transition-delay: 1.35s;
+      }
+    }
+  }
+
 }
 
 @keyframes mainAnim {
@@ -1069,5 +1178,17 @@ html {
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes asideAnim {
+  from {
+    opacity: 0;
+    transform: translate(50px,0px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px,0px);
   }
 }

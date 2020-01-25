@@ -39,6 +39,8 @@
   background: transparent;
   color: $white-color;
   transition: all 0.25s;
+  transition-delay: 0.65s;
+  opacity: 0;
   @media screen and (max-width: 768px) {
     padding: 10px 30px;
     border: 1.5px solid #D4D92C;
@@ -46,6 +48,9 @@
     border-radius: 6px;
   }
 
+  &.anim-off{
+    transition-delay: 0s;
+  }
 
   span {
     display: inline-block;
@@ -54,7 +59,7 @@
     background-position: center;
     background-size: contain;
     background-image: url("../static/img/arrow-right.svg");
-    width: 0;
+    width: 0px;
     transition: all 0.25s;
     margin-left: 10px;
     vertical-align: sub;
@@ -63,7 +68,6 @@
   &:hover {
     background: $yellow-btn-color;
     color: $black-color;
-
     span {
       width: 25px;
     }
@@ -87,6 +91,7 @@
 }
 
 .btn-youtube {
+  opacity: 0;
   color: $black-color;
   transition: all 0.25s;
   cursor: pointer;
