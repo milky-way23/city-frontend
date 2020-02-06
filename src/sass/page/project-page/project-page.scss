@@ -1169,7 +1169,7 @@
     left: 160px;
     background: $white-color;
     width: 466px;
-    padding: 70px 60px 30px 60px;
+    padding: 70px 0px 30px 60px;
     z-index: 3;
     @media screen and (max-width: 1500px) {
       left: 80px;
@@ -1179,7 +1179,7 @@
       left: 20px;
       width: 430px;
       top: 20px;
-      padding: 70px 40px 30px 40px;
+      padding: 70px 0px 30px 40px;
     }
 
     @media screen and (max-width: 992px) {
@@ -1195,6 +1195,34 @@
       display: flex;
       align-items: center;
       margin-bottom: 20px;
+      cursor: pointer;
+      &.disable{
+        opacity: 0.4;
+      }
+    }
+
+    &__items{
+      position: relative;
+      width: 100%;
+      height: 359px;
+      overflow-y: hidden;
+
+      &.active{
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 4px;
+            background-color: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #d6dd25;
+          outline: 81px solid slategrey;
+        }
+      }
     }
 
     .item-hide {
@@ -1213,6 +1241,34 @@
       box-shadow: 0px 5px 10px -5px rgb(0, 0, 0);
       border-radius: 50%;
       margin-right: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 40px;
+
+      &.school{
+        background-image: url('/static/img/school.png');
+      }
+      &.garden{
+        background-image: url('/static/img/gargen.png');
+      }
+      &.med{
+        background-image: url('/static/img/med.png');
+      }
+      &.bank{
+        background-image: url('/static/img/bank.png');
+      }
+      &.park{
+        background-image: url('/static/img/park.png');
+      }
+      &.gym{
+        background-image: url('/static/img/gym.png');
+      }
+      &.cafe{
+        background-image: url('/static/img/park.png');
+      }
+      &.store{
+        background-image: url('/static/img/park.png');
+      }
     }
 
     &__text {
@@ -1221,15 +1277,39 @@
     }
 
     &__more {
-      line-height: 22px;
-      color: #c7c7c7;
-      font-size: 14px;
-      cursor: pointer;
-
-      span {
-        vertical-align: top;
+      margin-top: 40px;
+      svg{
+        width: 17px;
+        height: 21px;
         margin-right: 5px;
+        transition: 0.3s;
+        transform: rotate(0deg);
       }
+
+      p{
+        line-height: 22px;
+        color: #c7c7c7;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      &.show{
+        display: flex;
+      }
+      &.hide{
+        display: none;
+      }
+
+      &.active{
+        svg{
+          transition: 0.3s;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &.active{
+      overflow-y: scroll;
     }
   }
 }

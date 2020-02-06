@@ -81,11 +81,29 @@
       color: $white-color;
       text-decoration: none;
       cursor: pointer;
+      position: relative;
+
+      &:before{
+        content: '';
+        width: 0%;
+        left: 0px;
+        position: absolute;
+        bottom: -5px;
+        transition: 0.3s;
+        height: 1px;
+        background-color: $yellow-btn-color;
+      }
 
       &:focus {
         outline: none;
         box-shadow: none;
         border: none;
+      }
+      &:hover{
+        &:before{
+          transition: 0.3s;
+          width: 100%;
+        }
       }
     }
   }
@@ -275,8 +293,10 @@
   }
 
   &.hidden{
-    transform: translate(0px, -100%);
-    position: fixed;
+    transform: translate(0px, -110%);
+    position: absolute;
+    transition: 0.3s;
+    opacity: 0;
   }
 
   &.fixed{
@@ -284,7 +304,21 @@
     padding-top: 0px;
     transform: translate(0px, 0px);
     transition: 0.3s;
-    background-color: rgba(0,0,0,0.5);
+    opacity: 1;
+    background-color: $white-color;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+
+    a{
+      color: $black-color;
+    }
+  }
+
+  &.invert{
+    background-color: transparent;
+    box-shadow:none;
+    a{
+      color: $white-color;
+    }
   }
 }
 

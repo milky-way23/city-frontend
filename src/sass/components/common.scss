@@ -254,7 +254,12 @@ p {
     &::placeholder {
       color: #c6c6c6;
     }
-
+    &:disabled{
+      background-color: transparent;
+      &:focus, &:active {
+        border-bottom: 1px solid #f3f3f3;
+      }
+    }
     &:focus, &:active {
       border-color: $green-color;
       box-shadow: none;

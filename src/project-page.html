@@ -85,12 +85,12 @@
             к душевному уюту и европейской гениальной простоте</p>
     </div>
 
-    <div class="position">
+    <div class="position active">
         <div class="project-info__image">
             <img src="static/img/5continent.jpg" alt="">
         </div>
 
-        <div class="project-info__map">
+        <div class="project-info__map active">
             <div class="project-info__item item1">
                 <div class="circle" data-info="20">+</div>
                 <div class="info-block">Видов планировочных
@@ -98,8 +98,8 @@
                 </div>
             </div>
 
-            <div class="project-info__item item2">
-                <div class="circle" data-info="374">+</div>
+            <div class="project-info__item item2 active">
+                <div class="circle active" data-info="374">374</div>
                 <div class="info-block">Эргономичные
                     планировки
                 </div>
@@ -467,76 +467,58 @@
         </div>
     </div>
 
-    <div class="map" id="project-ymap">
+    <div class="map" id="project-ymap" data-lat="56.845189" data-long="53.222175">
         <div class="map-list">
             <div class="h2 map-list__header">Объекты</div>
 
             <div class="map-list__items">
-                <div class="map-list__item">
-                    <div class="map-list__icon"></div>
+                <div class="map-list__item js-change-map" data-target="school">
+                    <div class="map-list__icon school"></div>
                     <div class="map-list__text">Школа</div>
                 </div>
 
-                <div class="map-list__item">
-                    <div class="map-list__icon"></div>
+                <div class="map-list__item js-change-map" data-target="garden">
+                    <div class="map-list__icon garden"></div>
                     <div class="map-list__text">Детский сад, ясли</div>
                 </div>
 
-                <div class="map-list__item">
-                    <div class="map-list__icon"></div>
+                <div class="map-list__item js-change-map" data-target="med">
+                    <div class="map-list__icon med"></div>
                     <div class="map-list__text">Медицинский центр</div>
                 </div>
 
-                <div class="map-list__item">
-                    <div class="map-list__icon"></div>
+                <div class="map-list__item js-change-map" data-target="bank">
+                    <div class="map-list__icon bank"></div>
                     <div class="map-list__text">Банк</div>
                 </div>
 
-                <div class="map-list__item">
-                    <div class="map-list__icon"></div>
+                <div class="map-list__item js-change-map" data-target="park">
+                    <div class="map-list__icon park"></div>
                     <div class="map-list__text">Парк</div>
                 </div>
 
-                <div class="map-list__item">
-                    <div class="map-list__icon"></div>
+                <div class="map-list__item js-change-map" data-target="gym">
+                    <div class="map-list__icon gym"></div>
                     <div class="map-list__text">Фитнес</div>
                 </div>
 
-                <div class="map-list__item item-hide">
-                    <div class="map-list__icon"></div>
+                <div class="map-list__item js-change-map" data-target="store">
+                    <div class="map-list__icon store"></div>
                     <div class="map-list__text">Магазин</div>
                 </div>
 
-                <div class="map-list__item item-hide">
-                    <div class="map-list__icon"></div>
+                <div class="map-list__item js-change-map" data-target="cafe">
+                    <div class="map-list__icon cafe"></div>
                     <div class="map-list__text">Кафе</div>
                 </div>
             </div>
             <div class="map-list__more">
-                <span>
-                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                    <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-                         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                         xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 16.592533 21.333332" height="21.333332" width="16.592533" xml:space="preserve"
-                         id="svg2" version="1.1">
-	<metadata id="metadata8">
-		<rdf:RDF>
-			<cc:Work rdf:about="">
-				<dc:format>image/svg+xml</dc:format>
-				<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-			</cc:Work>
-		</rdf:RDF>
-	</metadata>
-	<defs id="defs6"/>
-	<g transform="matrix(1.3333333,0,0,-1.3333333,0,21.333333)" id="g10">
-		<g transform="translate(5.733,16.0002)" id="g12">
-			<path id="path14" style="fill:#c7c7c7;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                  d="M 0,0 V -14.115 L -5.026,-8.964 -5.733,-9.626 0.49,-16 6.711,-9.626 6.004,-8.964 0.978,-14.115 V 0 Z"/>
-		</g>
-	</g>
-</svg>
-            </span>Все обозначения
+              <svg>
+                <use xlink:href="#arrow-down"></use>
+              </svg>
+              <p>
+                Все обозначения
+              </p>
             </div>
         </div>
     </div>
