@@ -175,3 +175,40 @@
     pointer-events: all !important;
   }
 }
+
+
+#finish{
+  display: none;
+
+  &.active{
+    display: flex;
+  }
+}
+
+.search-result{
+  position: relative;
+  width: auto;
+  max-width: 70%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.search-item{
+  position: relative;
+  width: 100%;
+  max-width: 222px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0px 15px;
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover{
+    box-shadow: 0 0 5px 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+  }
+}
