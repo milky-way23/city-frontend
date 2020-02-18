@@ -20,8 +20,10 @@
 
       if(scrollTopVal > $('.header').height() + 130){
         $('.header').addClass('hidden');
+        $('body').addClass('padding-top');
       } else {
         $('.header').removeClass('hidden');
+        $('body').removeClass('padding-top');
       }
 
       if( scrollTopVal > $(window).height()){
@@ -40,6 +42,9 @@
       $('[data-section-name]').each(function(){
         if(scrollTopVal >= $(this).offset().top){
           $(this).find('.main-number').addClass('active');
+        }
+        if($(this).data('section-name') == 'main1'){
+          $('.sparrow').addClass('active');
         }
       })
     }
@@ -87,9 +92,19 @@
     $('.map-list__items').on('mouseenter',function(e){
       $('html').addClass('noScroll');
     });
+
     $('.map-list__items').on('mouseleave',function(e){
       $('html').removeClass('noScroll');
-    })
+    });
+
+    $('.main-call-link').on('click', function(e){
+      if( $(window).innerWidth() > 1024){
+        e.preventDefault();
+        console.log('asd');
+        $('#modalPhone1').addClass('show');
+        $('html').addClass('noScroll');
+      }
+    });
 
     // $(function () {
     //     $.scrollify({

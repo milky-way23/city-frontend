@@ -12,11 +12,15 @@ $('.mortgage-offer__item').click(function () {
             $('.mortgage-bank').addClass('right');
         }
     }
+    if($(window).innerWidth() <= 1024){
+      $('.mortgage-offer__wrap').height( $('.mortgage-bank').height() - 50).addClass('overflow');
+    }
 });
 
 $('.mortgage-bank__close').click(function () {
     $(this).closest('.mortgage-bank').removeClass('active left right');
     $('.mortgage-offer__item.active').removeClass('active');
+    $('.mortgage-offer__wrap').height('auto').removeClass('overflow');
 });
 
 

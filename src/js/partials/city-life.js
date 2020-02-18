@@ -7,30 +7,8 @@
         $(this).parents().attr('data-next', $(this).attr('data-option'));
         $(this).parents().find('.life__btn .btn-line').removeAttr('disabled');
         $(this).parents().parents().find('.life__btn').find('.btn-line').attr('data-next', $('.life__wrap.active').attr('data-next'))
-
-        // e.preventDefault();
-        // $(this).parents('.life__wrap').find('.life__btn button')
-        //   .attr('data-next', $(this).attr('data-option'))
-        //   .removeAttr('disabled');
     });
-
-    // $('.life__wrap .life__btn .btn-line').click(function (e) {
-    //   e.preventDefault();
-    //   console.log('123123');
-    //   $('.life__wrap.active').removeClass('active');
-    //   console.log(`#${$(this).attr("data-next")}`);
-    //   $(`#${$(this).attr("data-next")}`).addClass('active');
-    // });
-
-    /*$(comeback).click(function(e) {
-        e.preventDefault();
-        if (!($(this).hasClass('disabled'))){
-            $('.life__wrap.active').removeClass('active');
-            $('#' + $(this).attr('data-prev') ).addClass('active');
-
-
-        }
-    });*/
+    
 
     $('.life__btn a').on('click',function(e){
       console.log('asd');
@@ -84,6 +62,7 @@
           $('#' +  $(this).attr('data-next')).find('.life__btn a').removeClass('disabled');
         }
     });
+
 
 
 

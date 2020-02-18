@@ -23,7 +23,13 @@
       content: "";
       flex: auto;
     }
+
+    &.overflow{
+      overflow: hidden;
+    }
   }
+
+
 
   &__col {
     width: 25%;
@@ -170,7 +176,7 @@
   }
 
   @media screen and (max-width: 1200px) {
-    width: 680px;
+    width: 100%;
     margin: auto;
   }
   @media screen and (max-width: 992px) {

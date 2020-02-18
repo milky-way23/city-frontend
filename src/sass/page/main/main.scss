@@ -691,12 +691,22 @@ html {
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 55%;
+  overflow-x: hidden;
   //background-image: url("../static/img/general_s_izmeneniami.jpg");
   position: relative;
 
   .sparrow{
     position: absolute;
     right: 0px;
+    transition: 0.3s;
+    transform:  translate(-80%, 40%);
+    &.active{
+      transition: 0.3s;
+      transform: translate(0%,0%);
+      @media all and(max-width: 768px){
+        transform: translate(20%, -40%);
+      }
+    }
   }
 
   .col-50{
@@ -1255,7 +1265,7 @@ html {
   }
 
   .header {
-    animation: mainAnim 1.5s both;
+    opacity: 1;
   }
 
   .header {
