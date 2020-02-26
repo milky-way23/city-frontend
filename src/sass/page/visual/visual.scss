@@ -227,7 +227,11 @@
       position: relative;
       margin-left: 14%;
       width: 86%;
+      display: none;
 
+      &.active{
+        display: block;
+      }
     }
 
     &--name {

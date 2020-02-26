@@ -228,9 +228,12 @@
         $('.big-point.show').removeClass('show');
         $('.min-point.hide').removeClass('hide');
         $('.big-point__box.show').removeClass('show')
-
+        var strokeImg = $(this).data('house');
         var bigPoint = $(this).parent().find('.big-point');
         var bigText = $(this).parent().find('.big-point__box');
+
+        $('.stroke-img').removeClass('active');
+        $(`.stroke-img.stroke-img--${strokeImg}`).addClass('active');
 
         $(this).addClass('hide');
         $(bigPoint).addClass('show');

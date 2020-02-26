@@ -1071,13 +1071,70 @@ html {
     @media screen and (max-width: 992px) {
       padding-bottom: 53%;
     }
+
+    .stroke{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      .stroke-img{
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s;
+        &:hover,
+        &.active{
+          opacity: 1;
+          transition: 0.3s;
+        }
+        &--cont{
+          width: 22%;
+          left: 50%;
+          top: 50%;
+          transform: translate(-127%, -64%);
+          @media screen and (max-width: 992px){
+            width: 28%;
+            transform: translate(-125%, -64%);
+          }
+
+        }
+        &--eco{
+          width: 27%;
+          left: 50%;
+          top: 50%;
+          transform: translate(-146%, 42%);
+          @media screen and (max-width: 992px){
+              transform: translate(-152%, 37%);
+              width: 32%;
+          }
+        }
+        &--parus{
+          width: 31%;
+          left: 50%;
+          top: 50%;
+          transform: translate(16%, 33%);
+          @media screen and (max-width: 992px){
+            width: 38%;
+          }
+        }
+        &--ocean{
+          width: 21%;
+          left: 50%;
+          top: 50%;
+          transform: translate(40%, -68%);
+          @media screen and (max-width: 992px){
+            width: 26%;
+          }
+        }
+      }
+    }
   }
 
   &__point {
     position: absolute;
     top: 20px;
     left: 30px;
-
+    z-index: 1000;
     &.point1 {
       top: get-xl(100px);
       left: get-xl(550px);
