@@ -4,7 +4,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  z-index: 11;
+  z-index: 12;
 
   @media screen and (max-width: 1500px) {
     top: 30px;
@@ -119,6 +119,7 @@
   &__btn {
     width: 20px;
     height: 15px;
+    position: relative;
     cursor: pointer;
     transition: 1.5s;
     transform: translate(-50px, 0px);
@@ -308,23 +309,29 @@
     opacity: 0;
   }
 
-  &.fixed{
-    position: fixed;
-    transform: translate(0px, 0px);
+  &-fixed{
+    position: fixed !important;
+    transform: translate(0px, -130%);
     transition: 0.3s;
     opacity: 1;
     top: 0px;
     background-color: $white-color;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
-
     a{
       color: $black-color;
     }
   }
 
+  &.active{
+    transform: translate(0px, 0%);
+    transition: 0.3s;
+    z-index: 1001;
+  }
+
   &.invert{
     background-color: transparent;
     box-shadow:none;
+    z-index: 1001;
     a{
       color: $white-color;
     }
@@ -386,7 +393,7 @@
   }
 
   &.show {
-    z-index: 10;
+    z-index: 1000;
     transition: 0.3s;
     opacity: 1;
   }
@@ -690,7 +697,7 @@
 
 .header-page {
   position: relative;
-
+  top: 30px;
   .header__menu {
     &-link {
       color: $black-color;

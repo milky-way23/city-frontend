@@ -9,7 +9,6 @@
                 </a>
 
                 <a href="https://www.uds18.ru/" class="header__logo">
-                    <!-- <img src="static/img/logo-ural.svg" alt=""> -->
                     <svg fill="#aeaeae">
                       <use xlink:href="#logo"></use>
                     </svg>
@@ -41,6 +40,46 @@
             </div>
         </div>
     </header>
+
+    <div class="header header-fixed">
+        <div class="container-fluid">
+            <div class="header__wrap">
+                <a href="main.html" class="header__main-logo">
+                    <img src="static/img/logo.svg" alt="">
+                </a>
+
+                <a href="https://www.uds18.ru/" class="header__logo">
+                    <svg fill="#aeaeae">
+                      <use xlink:href="#logo"></use>
+                    </svg>
+                </a>
+
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="buy.html" class="header__menu-link">Как купить</a>
+                    </li>
+
+                    <li class="header__menu-item">
+                        <a href="news.html" class="header__menu-link">Акции</a>
+                    </li>
+
+                    <li class="header__menu-item">
+                        <a href="choose-flat.html" class="header__menu-link">Выбрать квартиру</a>
+                    </li>
+
+                    <li class="header__menu-item">
+                        <a href="contact.html" class="header__menu-link">Контакты</a>
+                    </li>
+                </ul>
+
+                <div class="header__btn" data-open="close">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="main-menu">
         <div class="main-menu-bg">
@@ -486,10 +525,10 @@
             </div>
 
             <div class="stroke">
-              <img class="stroke-img stroke-img--cont" src="/static/img/5_Cont.svg" alt="">
-              <img class="stroke-img stroke-img--eco" src="/static/img/Eco.svg" alt="">
-              <img class="stroke-img stroke-img--parus active" src="/static/img/Parus.svg" alt="">
-              <img class="stroke-img stroke-img--ocean" src="/static/img/Ocean.svg" alt="">
+              <img class="stroke-img stroke-img--cont" data-house="cont" src="/static/img/5_Cont.svg" alt="">
+              <img class="stroke-img stroke-img--eco" data-house="eco" src="/static/img/Eco.svg" alt="">
+              <img class="stroke-img stroke-img--parus active" data-house="parus" src="/static/img/Parus.svg" alt="">
+              <img class="stroke-img stroke-img--ocean" data-house="ocean" src="/static/img/Ocean.svg" alt="">
             </div>
         </div>
     </section>

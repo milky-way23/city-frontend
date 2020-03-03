@@ -41,11 +41,21 @@
     @media screen and (max-width: 768px) {
       width: calc(100% / 2);
       min-width: calc(100% / 2);
+      &:nth-child(2n){
+        .mortgage-offer__item{
+          margin-left: 15px;
+        }
+      }
     }
 
     @media screen and (max-width: 500px) {
       width: 100%;
       min-width: 100%;
+      &:nth-child(2n){
+        .mortgage-offer__item{
+          margin-left: 0px;
+        }
+      }
     }
   }
 
@@ -167,7 +177,7 @@
   top: 104px;
   border-radius: 3px;
   width: 680px;
-  height: auto;
+  height: 630px;
   z-index: 2;
   display: none;
 

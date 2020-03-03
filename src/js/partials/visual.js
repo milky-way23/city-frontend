@@ -10,9 +10,7 @@
     });
 
     $('.house').mouseenter(function(){
-      console.log('asd');
       var target = $(this).data('house');
-      console.log(target);
       $('.visual__house-info').removeClass('active');
       $('.visual__house-info[data-target="'+target+'"]').addClass('active');
     });
