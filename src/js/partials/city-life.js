@@ -3,15 +3,15 @@
     var next = $('.js-first-block .btn-line');
 
     $('.life-group__input').click(function (e) {
-        console.log($(this));
+      console.log('input click');
         $(this).parents().attr('data-next', $(this).attr('data-option'));
         $(this).parents().find('.life__btn .btn-line').removeAttr('disabled');
-        $(this).parents().parents().find('.life__btn').find('.btn-line').attr('data-next', $('.life__wrap.active').attr('data-next'))
+        $(this).parents().parents().find('.life__btn').find('.btn-line').attr('data-next', $('.life__wrap.active').attr('data-next'));
+        $(this).parent().parent().find('.life__btn').find('.btn-line').click();
     });
-    
+
 
     $('.life__btn a').on('click',function(e){
-      console.log('asd');
       e.preventDefault();
       if (!($(this).hasClass('disabled'))){
         $('.life__wrap.active').removeClass('active');

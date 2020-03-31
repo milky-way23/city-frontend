@@ -199,6 +199,7 @@
 
   &__item {
     border-radius: 3px;
+    text-decoration: none;
     transition: all 0.35s;
     width: 302px;
     height: 460px;
@@ -206,6 +207,8 @@
     margin-right: calc((100% - 1208px) / 3);
     overflow: hidden;
     margin-bottom: 60px;
+    display: block;
+    box-sizing: border-box;
     @media screen and (max-width: 1500px) {
       margin-right: calc((100% - 908px) / 2);
     }
@@ -804,6 +807,8 @@ sub {
       font-size: 12px;
       display: flex;
       align-items: center;
+      text-decoration: none;
+      color: #222;
       @media screen and (max-width: 1500px) {
         padding: 20px 0 20px 30px;
       }

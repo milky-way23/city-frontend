@@ -89,6 +89,7 @@
 
 
     $('.form-check-group input, .show-tab__item').click(function(){
+      console.log('asdasd');
         if($('.form-check-group input').prop("checked") == true){
             if ($('.form-check-group input').attr('data-tab') == 'show-list') {
                 $('.tabs-flats.show').removeClass('show');

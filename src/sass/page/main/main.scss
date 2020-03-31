@@ -2,6 +2,10 @@ html {
   overflow-x: hidden;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .noScroll {
   overflow: hidden;
 }
@@ -13,13 +17,12 @@ html {
   height: 36px;
   width: 36px;
   border-radius: 50%;
-  background-image: url("../static/img/up.svg");
+  background-image: url("../static/img/up-btn.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
   z-index: 2;
-  transform: rotate(180deg);
   display: none;
   @media screen and (max-width: 1200px) {
     left: 60px;
@@ -184,6 +187,7 @@ html {
     }
     @media all and(max-width: 576px) {
       top: 35%;
+      z-index: 1;
     }
   }
 
@@ -695,7 +699,6 @@ html {
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 55%;
-  // overflow-x: hidden;
   //background-image: url("../static/img/general_s_izmeneniami.jpg");
   position: relative;
 
